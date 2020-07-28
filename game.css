@@ -1,0 +1,29 @@
+html,body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+canvas {
+    border: 1px solid white;
+}
+#score{
+    font-size: 30px;
+}
+
+#ten{
+    color: white;
+    font-size: 30px;
+}
+
+#max-score{
+    color: white;
+    font-size: 30px;
+}
