@@ -17,7 +17,7 @@ function show_selected() {
 
     // Map
     var selector1 = document.getElementById('map');
-    var value1 = selector1[selector.selectedIndex].value;
+    var value1 = selector1[selector1.selectedIndex].value;
     document.getElementById('display1').innerHTML = value1;
     localStorage.setItem('value1', value1);
 }
