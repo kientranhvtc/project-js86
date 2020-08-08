@@ -3,9 +3,10 @@ var ten = document.getElementById('ten');
 ten.innerHTML = localStorage.getItem('name');
 var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
-if (localStorage.getItem('max-score') == null){
-    localStorage.setItem('max-score',0);
+if (localStorage.getItem('max-score') == null) {
+    localStorage.setItem('max-score', 0);
 }
+// localStorage.removeItem("max-score"); 
 document.getElementById('max-score').innerHTML = localStorage.getItem('max-score');
 var score = Number(document.getElementById('score').innerHTML);
 document.getElementById('score').style.color = "white";
@@ -30,7 +31,9 @@ function getRandomInt(min, max) {
 }
 
 
+
 // game loop
+
 function loop() {
     //hàm này giống như setTimeout, sẽ gọi lại hàm loop khi loop thực thi xong
 
@@ -39,11 +42,15 @@ function loop() {
 
     // slow game loop to 15 fps instead of 60 - 60/15 = 4
 
-    if (++count < 10) {
+    var tocdo = localStorage.getItem('value'); 
+   
+    if (++count < tocdo) {
 
         return;
 
     }
+
+
 
 
     count = 0;
@@ -61,7 +68,7 @@ function loop() {
     if (snake.x < 0) {
 
         snake.x = canvas.width - grid;
-        
+
 
     }
 
@@ -96,7 +103,7 @@ function loop() {
 
         snake.cells.pop();
 
-    }   
+    }
 
 
     // draw apple
@@ -142,8 +149,8 @@ function loop() {
 
             if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
 
-                if(score > localStorage.getItem('max-score')){
-                    localStorage.setItem('max-score',score);
+                if (score > localStorage.getItem('max-score')) {
+                    localStorage.setItem('max-score', score);
                 }
 
                 // snake.x = 0;
@@ -214,3 +221,5 @@ document.addEventListener('keydown', function (e) {
 
 
 requestAnimationFrame(loop);
+
+
