@@ -3,6 +3,7 @@ html,body {
     margin: 0;
 }
 body {
+    font-family: "Press Start 2P", cursive;;
     background: black;
     display: flex;
     align-items: center;
@@ -12,7 +13,7 @@ body {
 }
 
 canvas {
-    border: 1px solid white;
+    border: 4px solid white;
 }
 #score{
     font-size: 30px;
