@@ -41,7 +41,7 @@ diemcao.innerHTML = localStorage.getItem('max-score');
 
 // zoom trang
 function zoom() {
-    document.body.style.zoom = "56%"
+    document.body.style.zoom = "58%"
 }
 
 //video playback speed
