@@ -1,10 +1,18 @@
-// Player name
+// Khởi tạo Game
 var mainForm = document.getElementById('main-form');
 mainForm.addEventListener('submit', function (e) {
     e.preventDefault();
     var name = mainForm.username.value;
     localStorage.setItem('name', name);
-    window.location.href = "ran.html";
+    // Load map
+    var mapName = localStorage.getItem('value1');
+    if (mapName == 2) {
+        window.location.href = "rande.html";
+    } else if (mapName == 1) {
+        window.location.href = "ranbt.html";
+    } else if (mapName == 0) {
+        window.location.href = "rankho.html";
+    }
 })
 
 // Setting Game
@@ -12,13 +20,13 @@ function show_selected() {
     // Game dificulty
     var selector = document.getElementById('game-difficulty');
     var value = selector[selector.selectedIndex].value;
-    document.getElementById('display').innerHTML = value;
+    // document.getElementById('display').innerHTML = value;
     localStorage.setItem('value', value);
-
+    
     // Map
     var selector1 = document.getElementById('map');
     var value1 = selector1[selector1.selectedIndex].value;
-    document.getElementById('display1').innerHTML = value1;
+    // document.getElementById('display1').innerHTML = value1;
     localStorage.setItem('value1', value1);
 }
 var el = document.getElementById('btn')
@@ -33,7 +41,7 @@ diemcao.innerHTML = localStorage.getItem('max-score');
 
 // zoom trang
 function zoom() {
-    document.body.style.zoom = "58%"
+    document.body.style.zoom = "56%"
 }
 
 //video playback speed
