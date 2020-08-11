@@ -2,6 +2,10 @@ html,body {
     height: 100%;
     margin: 0;
 }
+@font-face {
+    font-family: 'PressStart2P';
+    src: url('./PressStart2P-Regular.ttf');
+}
 body {
     font-family: "Press Start 2P", cursive;;
     background: black;
