@@ -220,7 +220,7 @@ document.addEventListener('keydown', function (e) {
         if(isPaused == true) {
             isPaused = false;
             context.fillText("Game Paused",200,200);
-            context.font = "20px tahoma";
+            context.font = "20px PressStart2P";
             context.fillStyle = "White";
             context.textAlign ="center";
             context.textBaseLine = "middle";
