@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Snake Game</title>
     <h1>MindX Project<br> Snake Game</h1>
 </head>
@@ -19,19 +18,20 @@
         <br>
         <button class="eightbit-btn">Play Game</button>
     </form>
-    <div id="display"></div>
-    <div id="display1"></div>
+
+    <!-- <div id="display"></div>
+    <div id="display1"></div> -->
 
 
     <hr />
 
     <div class="dropdown">
-        <label class="eightbit-btn eightbit-btn--proceed">Game Difficulty</label>
+        <label class="eightbit-btn eightbit-btn--level">Game Difficulty</label>
         <div class="dropdown-content">
             <select class="setting" id="game-difficulty">
                 <option value="2">Hard</option>
-                <option value="5" selected>Medium</option>
-                <option value="10">Easy</option>
+                <option value="6">Medium</option>
+                <option value="15" selected>Easy</option>
             </select>
         </div>
     </div>
@@ -42,9 +42,9 @@
         <label class="eightbit-btn eightbit-btn--map">Map</label>
         <div class="dropdown-content dropdown-content--map">
             <select class="setting" id="map">
-                <option value="a">Hard</option>
-                <option value="b" selected>Medium</option>
-                <option value="c">Easy</option>
+                <option value="0">Hard</option>
+                <option value="1">Medium</option>
+                <option value="2" selected>Easy</option>
             </select>
         </div>
     </div>
@@ -87,9 +87,7 @@
     <!-- <button class="eightbit-btn eightbit-btn--audio" id="btn-audio" onclick="audio()">Pause</button> -->
 
 
-
-
-    <script src="game.js"></script>
+    
     <script src="home.js"></script>
 
 </body>
