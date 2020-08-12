@@ -40,14 +40,14 @@ var wall3 = {
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
-
+var isPaused = true;
 
 // game loop
 function loop() {
     //hàm này giống như setTimeout, sẽ gọi lại hàm loop khi loop thực thi xong
-
-    requestAnimationFrame(loop);
-
+    if (isPaused){
+        requestAnimationFrame(loop);
+    }
 
     // slow game loop to 15 fps instead of 60 - 60/15 = 4
     var tocdo = localStorage.getItem('value'); 
@@ -241,6 +241,20 @@ document.addEventListener('keydown', function (e) {
 
         snake.dx = 0;
 
+    }
+     else if (e.which ===32){
+        if(isPaused == true) {
+            isPaused = false;
+            context.fillText("Game Paused",200,200);
+            context.font = "20px PressStart2P";
+            context.fillStyle = "White";
+            context.textAlign ="center";
+            context.textBaseLine = "middle";
+        }
+        else {
+            isPaused = true;
+            requestAnimationFrame(loop);
+        }
     }
 
 });
