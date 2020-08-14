@@ -3,8 +3,8 @@ var ten = document.getElementById('ten');
 ten.innerHTML = localStorage.getItem('name');
 var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
-if (localStorage.getItem('max-score') == null){
-    localStorage.setItem('max-score',0);
+if (localStorage.getItem('max-score') == null) {
+    localStorage.setItem('max-score', 0);
 }
 document.getElementById('max-score').innerHTML = localStorage.getItem('max-score');
 var score = Number(document.getElementById('score').innerHTML);
@@ -26,8 +26,8 @@ var apple = {
     y: 320
 };
 var wall = {
-    dx: canvas.width-320,
-    dy: canvas.height-320
+    dx: canvas.width - 320,
+    dy: canvas.height - 320
 }
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -37,12 +37,12 @@ var isPaused = true;
 // game loop
 function loop() {
     //hàm này giống như setTimeout, sẽ gọi lại hàm loop khi loop thực thi xong
-    if(isPaused){
-    requestAnimationFrame(loop);
+    if (isPaused) {
+        requestAnimationFrame(loop);
     }
 
     // slow game loop to 15 fps instead of 60 - 60/15 = 4
-    var tocdo = localStorage.getItem('value'); 
+    var tocdo = localStorage.getItem('value');
 
 
     if (++count < tocdo) {
@@ -67,7 +67,7 @@ function loop() {
     if (snake.x < 0) {
 
         snake.x = canvas.width - grid;
-        
+
 
     }
 
@@ -102,11 +102,11 @@ function loop() {
 
         snake.cells.pop();
 
-    }   
+    }
 
     //fill wall
     context.fillStyle = 'yellow';
-    context.fillRect(wall.dx, wall.dy,canvas.width,grid-1)
+    context.fillRect(wall.dx, wall.dy, canvas.width, grid - 1)
 
     // draw apple
 
@@ -123,10 +123,10 @@ function loop() {
 
         context.fillRect(cell.x, cell.y, grid - 1, grid - 1);
 
-        if (cell.x >= wall.dx && cell.y === wall.dy){
-            
-            if(score > localStorage.getItem('max-score')){
-                localStorage.setItem('max-score',score);
+        if (cell.x >= wall.dx && cell.y === wall.dy) {
+
+            if (score > localStorage.getItem('max-score')) {
+                localStorage.setItem('max-score', score);
             }
 
             window.location.href = "ranbt.html";
@@ -139,12 +139,12 @@ function loop() {
 
             snake.maxCells++;
 
-            
+
             apple.x = getRandomInt(0, 25) * grid;
 
             apple.y = getRandomInt(0, 25) * grid;
-            
-            while (apple.x >= wall.dx && apple.y === wall.dy){
+
+            while (apple.x >= wall.dx && apple.y === wall.dy) {
                 apple.x = getRandomInt(0, 25) * grid;
 
                 apple.y = getRandomInt(0, 25) * grid;
@@ -165,8 +165,8 @@ function loop() {
 
             if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
 
-                if(score > localStorage.getItem('max-score')){
-                    localStorage.setItem('max-score',score);
+                if (score > localStorage.getItem('max-score')) {
+                    localStorage.setItem('max-score', score);
                 }
 
                 // snake.x = 0;
@@ -232,13 +232,13 @@ document.addEventListener('keydown', function (e) {
         snake.dx = 0;
 
     }
-    else if (e.which ===32){
-        if(isPaused == true) {
+    else if (e.which === 32) {
+        if (isPaused == true) {
             isPaused = false;
-            context.fillText("Game Paused",200,200);
+            context.fillText("Game Paused", 200, 200);
             context.font = "20px PressStart2P";
             context.fillStyle = "White";
-            context.textAlign ="center";
+            context.textAlign = "center";
             context.textBaseLine = "middle";
         }
         else {

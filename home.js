@@ -48,16 +48,16 @@ function zoom() {
 var vid = document.getElementById("myVideo");
 vid.playbackRate = 0.2;
 
-// // audio
-// var audio = document.getElementById("myAudio");
-// var btn = document.getElementById("btn-audio");
+// audio
+var audio = document.getElementById("myAudio");
+var btn = document.getElementById("btn-audio");
 
-// function audio() {
-//   if (audio.paused) {
-//     audio.play();
-//     btn.innerHTML = "Pause";
-//   } else {
-//     audio.pause();
-//     btn.innerHTML = "Play";
-//   }
-// }
+function playAudio() {
+  if (audio.paused) {
+    audio.play();
+    btn.innerHTML = "||";
+  } else {
+    audio.pause();
+    btn.innerHTML = "|>";
+  }
+}
