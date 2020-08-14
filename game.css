@@ -43,7 +43,7 @@ canvas {
     text-decoration: none;
     color: black;
     box-shadow: inset -3px -3px 0px 0px #4aa52e;
-    /* top: -4px; */
+    top: -4px;
     left: 0;
     border-top: 4px white solid;
     border-bottom: 4px white solid;
@@ -69,7 +69,7 @@ canvas {
   }
 
   .eightbit-btn--audio {
-    width: 53px;
+    width: 52px;
     margin-left: 1066px;
     margin-top: -52px;
     position: relative;
@@ -86,7 +86,7 @@ canvas {
 }
 
 .eightbit-btn--home {
-    width: 53px;
+    width: 52px;
     margin-left: 916px;
     margin-top: -50px;
     position: relative;

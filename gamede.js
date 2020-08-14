@@ -237,3 +237,20 @@ document.addEventListener('keydown', function (e) {
 requestAnimationFrame(loop);
 
 
+
+// audio
+var audio = document.getElementById("myAudio");
+var btn = document.getElementById("btn-audio");
+
+function playAudio() {
+  if (audio.paused) {
+    audio.play();
+    btn.innerHTML = "||";
+  } else {
+    audio.pause();
+    btn.innerHTML = "|>";
+  }
+}
+
+
+
