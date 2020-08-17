@@ -10,13 +10,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-    <p>Player Name: </p>
-    <div id="ten"></div>
+    <br>
+    <br>
+    <div class="eightbit-btn" id="ten"></div>
     <canvas width="400" height="400" id="game"></canvas>
     <p>Score:</p>
     <div id="score">0</div>
     <p>Highest Score:</p>
     <div id="max-score">0</div>
+    <button class="eightbit-btn eightbit-btn--home" onclick="window.location.href='home.html'" onmouseover="bell()">Home</button>
+
+    <audio id="myAudio" src="video_sound/8_bit_win.mp3"></audio>
+
+    <audio src="video_sound/8bit_eat.ogg" id="eat-bgm"></audio>
+
+    <audio id="mySound" src="video_sound/8bit_button.ogg"></audio>
+
+
     <script src="gamekho.js"></script>
 
 </body>

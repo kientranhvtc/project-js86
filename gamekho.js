@@ -48,6 +48,8 @@ function loop() {
     if (isPaused) {
         requestAnimationFrame(loop);
     }
+    var bgAudio = document.getElementById('myAudio');
+    bgAudio.play();
 
     // slow game loop to 15 fps instead of 60 - 60/15 = 4
     var tocdo = localStorage.getItem('value');
@@ -146,6 +148,9 @@ function loop() {
         // snake ate apple
 
         if (cell.x === apple.x && cell.y === apple.y) {
+
+            var eatBgm = document.getElementById('eat-bgm');
+            eatBgm.play();
 
             snake.maxCells++;
 
@@ -261,3 +266,11 @@ document.addEventListener('keydown', function (e) {
 
 
 requestAnimationFrame(loop);
+
+
+// sound button
+var sound = document.getElementById("mySound");
+function bell() {
+    sound.play();
+}
+

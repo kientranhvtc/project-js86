@@ -68,26 +68,11 @@ canvas {
     border-right: 4px white solid;
   }
 
-  .eightbit-btn--audio {
-    width: 52px;
-    margin-left: 1066px;
-    margin-top: -52px;
-    position: relative;
-    letter-spacing: -11px;
-    text-align: left;
-}
-
-.eightbit-btn--audio:hover, .eightbit-btn--audio:focus {
-    background: #76c442;
-    box-shadow: inset -4px -4px 0px 0px #4aa52e;
-}
-.eightbit-btn--audio:active {
-    box-shadow: inset 3px 3px 0px 0px #4aa52e;
-}
+  
 
 .eightbit-btn--home {
-    width: 52px;
-    margin-left: 916px;
+    width: 112px;
+    margin-left: 1056px;
     margin-top: -50px;
     position: relative;
 }

@@ -18,12 +18,14 @@
     <div id="score">0</div>
     <p>Highest Score:</p>
     <div id="max-score">0</div>
-    <button class="eightbit-btn eightbit-btn--home" onclick="window.location.href='home.html'"><</button>
-    <button class="eightbit-btn eightbit-btn--audio" id="btn-audio" onclick="playAudio()">|></button>
+    <button class="eightbit-btn eightbit-btn--home" onclick="window.location.href='home.html'" onmouseover="bell()">Home</button>
 
-    <audio loop id="myAudio">
-        <source src="video_sound/8_bit_win.mp3" type="audio/mpeg">
-    </audio>
+    <audio id="myAudio" src="video_sound/8_bit_win.mp3"></audio>
+
+    <audio src="video_sound/8bit_eat.ogg" id="eat-bgm"></audio>
+
+    <audio id="mySound" src="video_sound/8bit_button.ogg"></audio>
+
 
     <script src="gamede.js"></script>
 

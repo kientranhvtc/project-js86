@@ -1,6 +1,7 @@
 //Ở đây ta tạo ra bộ khung chứa game
 var ten = document.getElementById('ten');
 ten.innerHTML = localStorage.getItem('name');
+
 var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
 if (localStorage.getItem('max-score') == null) {
@@ -40,6 +41,8 @@ function loop() {
         requestAnimationFrame(loop);
     }
 
+    var bgAudio = document.getElementById('myAudio');
+    bgAudio.play();
     // slow game loop to 15 fps instead of 60 - 60/15 = 4
 
     var tocdo = localStorage.getItem('value');
@@ -126,6 +129,9 @@ function loop() {
 
         if (cell.x === apple.x && cell.y === apple.y) {
 
+            var eatBgm = document.getElementById('eat-bgm');
+            eatBgm.play();
+
             snake.maxCells++;
 
 
@@ -149,9 +155,12 @@ function loop() {
 
             if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
 
+
+
                 if (score > localStorage.getItem('max-score')) {
                     localStorage.setItem('max-score', score);
                 }
+
 
                 // snake.x = 0;
 
@@ -238,19 +247,12 @@ requestAnimationFrame(loop);
 
 
 
-// audio
-var audio = document.getElementById("myAudio");
-var btn = document.getElementById("btn-audio");
-
-function playAudio() {
-  if (audio.paused) {
-    audio.play();
-    btn.innerHTML = "||";
-  } else {
-    audio.pause();
-    btn.innerHTML = "|>";
-  }
+// sound button
+var sound = document.getElementById("mySound");
+function bell() {
+    sound.play();
 }
+
 
 
 
