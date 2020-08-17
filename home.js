@@ -61,3 +61,9 @@ function playAudio() {
     btn.innerHTML = "|>";
   }
 }
+
+// sound button
+var sound = document.getElementById("mySound");
+function bell() {
+    sound.play();
+}
