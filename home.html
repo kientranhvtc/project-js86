@@ -13,10 +13,10 @@
 <hr>
 
 <body onload="zoom()">
-    <form id="main-form">
+    <form id="main-form" onclick="bell()">  
         <input class="eightbit-z" type="text" name="username" placeholder="Player Name">
         <br>
-        <button class="eightbit-btn">Play Game</button>
+        <button class="eightbit-btn" onmouseover="bell()">Play Game</button>
     </form>
 
     <!-- <div id="display"></div>
@@ -26,7 +26,7 @@
     <hr />
 
     <div class="dropdown">
-        <label class="eightbit-btn eightbit-btn--level">Game Difficulty</label>
+        <label class="eightbit-btn eightbit-btn--level" onmouseover="bell()">Game Difficulty</label>
         <div class="dropdown-content">
             <select class="setting" id="game-difficulty">
                 <option value="3">Hard</option>
@@ -39,7 +39,7 @@
     <br>
 
     <div class="dropdown">
-        <label class="eightbit-btn eightbit-btn--map">Map</label>
+        <label class="eightbit-btn eightbit-btn--map" onmouseover="bell()">Map</label>
         <div class="dropdown-content dropdown-content--map">
             <select class="setting" id="map">
                 <option value="0">Hard</option>
@@ -51,7 +51,7 @@
 
     <br>
 
-    <button class="eightbit-z eightbit-z--set" id="btn">Set Settings</button>
+    <button class="eightbit-z eightbit-z--set" id="btn" onclick="bell()">Set Settings</button>
     <!-- <div class="dropdown">
         <button class="eightbit-btn eightbit-btn--map">Map</button>
         <div class="dropdown-content">
@@ -68,7 +68,7 @@
     <hr />
 
     <div class="dropdown">
-        <div class="eightbit-btn eightbit-btn--high">Highest Score</div>
+        <div class="eightbit-btn eightbit-btn--high" onmouseover="bell()">Highest Score</div>
         <div class="dropdown-content">
             <div class="eightbit-btn eightbit-btn--high" id="diemcao">0</div>
         </div>
@@ -85,9 +85,12 @@
         <source src="video_sound/bg2.mp4" type="video/mp4">
     </video>
 
+    <!-- nhac nen -->
     <audio loop id="myAudio">
         <source src="video_sound/8_bit_win.mp3" type="audio/mpeg">
     </audio>
+
+    <audio id="mySound" src="video_sound/8bit_button.ogg"></audio>
 
 
 
